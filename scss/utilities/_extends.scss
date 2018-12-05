@@ -1,0 +1,13 @@
+// Placeholders, marked by %, are called with the @extend command.
+// They are used for recurring styles where no variable needs to be passed
+// (that's what @mixins are for).
+
+//Clearfix
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

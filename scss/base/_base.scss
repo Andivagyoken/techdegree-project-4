@@ -1,0 +1,28 @@
+
+// Base styles
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $stack-primary;
+  color: $color-text-base;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1 {
+  color: $color-prim;
+  font-weight: bold;
+}
+
+.link {
+  color: $color-sec;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container {
+  padding: 3em 3em;
+}

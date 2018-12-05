@@ -1,0 +1,37 @@
+
+// Descriptive color variables
+
+$viking: #54E1C0;
+$malibu: #4DDEFF;
+$white: #fff;
+
+$gray: #828282;
+$polar: #FAFEFD;
+
+$emerald: #63CC82;
+$sunglo: #E4757A;
+$coral: #FD7856;
+$purple-mountain: #927BC1;
+
+// Functional color variables
+
+$color-prim: $viking;
+$color-sec: $malibu;
+$color-background: $white;
+
+$color-text-light: lighten($gray, 35%);
+$color-text-base: $gray;
+$color-text-highlight: #FAFEFD;
+
+$color-btn-success: $emerald;
+$color-btn-error: $sunglo;
+$color-btn-warning: $coral;
+$color-btn-info: $purple-mountain;
+
+// Font stacks
+
+$stack-primary: "Open Sans", sans-serif;
+
+// Media query breakpoints
+
+$break-desktop: "(min-width: 481px)";
