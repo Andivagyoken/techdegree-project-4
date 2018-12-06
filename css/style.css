@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.nav, .img--avatar {
+  margin: auto;
+}
+
+.blockquote, .nav a:hover {
+  border-radius: 5px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -8,21 +16,6 @@ body {
   color: #828282;
   font-size: 1rem;
   line-height: 1.5;
-}
-
-h1 {
-  color: #54E1C0;
-  font-weight: bold;
-}
-
-.link {
-  color: #4DDEFF;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.container {
-  padding: 3em 3em;
 }
 
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -357,6 +350,18 @@ template {
   display: none;
 }
 
+.container {
+  padding: 3em 3em;
+}
+
+.grid__col--4 {
+  display: flex;
+}
+
+.img--avatar {
+  display: block;
+}
+
 .img--logo {
   display: block;
   margin-left: auto;
@@ -367,23 +372,54 @@ template {
 
 .nav {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.nav li {
-  display: block;
-  text-align: center;
-  margin: 0.5 1em;
+.nav .nav__item {
+  margin: 15px 15px;
 }
 .nav a {
   text-decoration: none;
   color: #828282;
+  background-color: #fff;
+  padding: 10px 130px;
 }
 .nav a:hover {
   background-color: #54E1C0;
   color: #FAFEFD;
+}
+.nav::after {
+  margin-bottom: 200px;
+}
+
+.headline--primary {
+  color: #54E1C0;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.headline--secondary {
+  font-weight: lighter;
+  color: #9c9c9c;
+  margin-bottom: 20px;
+}
+
+.link {
+  color: #4DDEFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+.link:hover {
+  color: #80e7ff;
+}
+
+.blockquote {
+  border-left: 7px solid #54E1C0;
+  padding-left: 15px;
+  font-size: 1.2em;
+  font-style: italic;
 }
 
 /*# sourceMappingURL=style.css.map */

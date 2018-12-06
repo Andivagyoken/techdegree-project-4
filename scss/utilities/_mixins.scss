@@ -1,3 +1,30 @@
 // Media queries
 
+@mixin mq($break) {
+  @if $break == "med" {
+    @media (min-width: $break-med) {
+      @content;
+    }
+  }
+  @else {
+    @error "'#{$break}' is not a valid argument"
+  }
+}
+
 // Flexbox
+
+@mixin flexy(
+  $disp: flex,
+  $dir: null,
+  $wrap: null,
+  $just: null,
+  $flex: null,
+  $align: null) {
+    display: $disp;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    justify-content: $just;
+    flex: $flex;
+    align-items: $align;
+    @content;
+}

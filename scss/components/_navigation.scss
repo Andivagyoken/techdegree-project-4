@@ -7,28 +7,34 @@
   margin-right: auto;
   margin-bottom: 3em;
   max-width: 300px;
+  // @include mq("med") {
+  //
+  // }
 }
 
 // Nav styles
 
 .nav {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 200px;
+  @extend %center;
+  @include flexy($dir: column, $align: center);
 
-  li {
-    display: block;
-    margin: 0.5 1em;
+  .nav__item {
+    margin: 15px 15px;
+
   }
   a {
     text-decoration: none;
     color: $color-text-base;
-    padding: 2em 2em;
-    text-align: center;
+    background-color: $white;
+    padding: 10px 130px;
   }
   a:hover {
     background-color: $color-prim;
     color: $color-text-highlight;
+    @extend %border-radius;
+  }
+  &::after {
+    margin-bottom: 200px;
   }
 }
