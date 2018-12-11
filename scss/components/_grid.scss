@@ -1,8 +1,65 @@
 
+// Grid styles
+
 .container {
   padding: 3em 3em;
+  max-width: $grid__bp-md * 1px;
+  margin: 0 auto;
+  @include mq("med") {
+    max-width: $grid__bp-lg * 1px;
+    padding: 3em 8em;
+  }
 }
 
-.grid__col--4 {
-  @include flexy;
+.card {
+  @include mq("med") {
+    display: inline-block;
+    margin-right: 30px;
+  }
+}
+
+.grid {
+  &__row {
+    @include flexy($dir: column, $wrap: wrap) {
+      width: 100%;
+    }
+    @include mq(med) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+// Calculate grid columns
+
+@include mq(med) {
+  @for $i from 1 through $g-col-count {
+    $context: g-context($g-col-w, $g-col-count, $g-gutter-w);
+    $target: ($g-col-w * $i) + ($g-gutter-w * ($i - 1));
+
+    .grid__col--#{$i} {
+      width: percentage($target / $context);
+    }
+  }
+}
+
+
+// Add colors to and style grid items
+
+  @each $size, $color in $colors-grid {
+    .grid__col--#{$size}.theme__colors {
+      background-color: $color;
+    }
+  }
+
+[class^="grid__col--"] {
+  @extend %border-radius;
+  @extend %col-style;
+}
+
+.centered {
+  @include mq(med) {
+    margin: auto;
+  }
 }

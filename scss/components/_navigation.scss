@@ -5,11 +5,12 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 3em;
+  margin-bottom: 1.5em;
   max-width: 300px;
-  // @include mq("med") {
-  //
-  // }
+  @include mq("med") {
+    display: inline-block;
+    margin-left: 30px;
+  }
 }
 
 // Nav styles
@@ -17,24 +18,28 @@
 .nav {
   list-style-type: none;
   @extend %center;
+  @extend %space-after;
   @include flexy($dir: column, $align: center);
+  @include mq("med") {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
 
   .nav__item {
     margin: 15px 15px;
-
   }
   a {
     text-decoration: none;
     color: $color-text-base;
     background-color: $white;
     padding: 10px 130px;
+    @include mq("med")  {
+      padding: 10px;
+    }
   }
   a:hover {
     background-color: $color-prim;
     color: $color-text-highlight;
     @extend %border-radius;
-  }
-  &::after {
-    margin-bottom: 200px;
   }
 }

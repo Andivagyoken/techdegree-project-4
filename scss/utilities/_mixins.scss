@@ -28,3 +28,14 @@
     align-items: $align;
     @content;
 }
+
+// Button-colors mixin
+
+@mixin themes($map) {
+  @each $theme, $color in $map {
+      &#{$theme} {
+        background-color: $color;
+        @content;
+      }
+    }
+  }

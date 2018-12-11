@@ -1,5 +1,18 @@
 
-.img--avatar {
+// Image styles
+
+.grid__col--6 {
+  @include flexy($dir: column, $align: center);
+}
+
+.img-- {
   @extend %center;
-  display: block;
+  &frame {
+    border: solid 1px $color-text-light;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  &avatar {
+    margin-bottom: 20px;
+  }
 }

@@ -28,10 +28,41 @@ $color-btn-error: $sunglo;
 $color-btn-warning: $coral;
 $color-btn-info: $purple-mountain;
 
+// Color maps
+
+$themes: (
+  "default": $malibu,
+  "success": $emerald,
+  "error": $sunglo,
+  "warning": $coral,
+  "info": $purple-mountain,
+);
+
+// Grid colors
+
+$colors-grid: (
+   '12': lighten($viking, 10%),
+   '3': lighten($purple-mountain, 25%),
+   '4': lighten($malibu,10%),
+   '5': lighten($emerald, 15%),
+   '6': darken($malibu, 25%),
+   '7': lighten($sunglo, 10%),
+   '8': lighten($coral, 10%),
+   );
+
 // Font stacks
 
 $stack-primary: "Open Sans", sans-serif;
 
 // Media query breakpoints
 
-$break-med: "(min-width: 769px)";
+$break-med: 769px;
+
+$grid__bp-md: 768;
+$grid__bp-lg: 1400;
+
+// Grid variables
+$g-col-w: 65px;
+$g-gutter-w: 15px;
+$g-col-count: 12;
+$g-cont-max-w: 1050px;

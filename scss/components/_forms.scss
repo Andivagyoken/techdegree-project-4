@@ -1,0 +1,28 @@
+
+// Form styles
+
+.form {
+  @include flexy($dir: column, $wrap: wrap);
+  .img--avatar {
+    @extend %center;
+    display: block;
+  }
+}
+
+.form {
+  &__label--hidden {
+    display: none;
+  }
+  &__input {
+    display: block;
+    border-style: none;
+    border-bottom: 5px solid $color-prim;
+    margin: 10px 0 20px 0;
+    padding: 12px;
+    font-size: 0.9em;
+    font-weight: bold;
+    &:focus {
+      border-style: none;
+    }
+  }
+}

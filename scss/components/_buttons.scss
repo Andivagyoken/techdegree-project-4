@@ -1,0 +1,17 @@
+
+// Button styles
+
+.btn-- {
+  @include themes($themes) {
+    @extend %btn-style;
+    @extend %border-radius;
+  }
+}
+
+.grid__col--12 {
+  @include flexy($dir: column);
+  @include mq(med) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}

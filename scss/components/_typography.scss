@@ -9,12 +9,15 @@
   font-weight: bold;
   letter-spacing: -1px;
   line-height: 1.2;
+  margin-left: 1em;
 }
 
 .headline--secondary {
   font-weight: lighter;
   color: lighten($color-text-base, 10%);
-  margin-bottom: 20px;
+  margin-bottom: 2em;
+  margin-block-start: 0px;
+  margin-block-end: auto;
 }
 
 .link {
@@ -30,7 +33,14 @@
   border-left: 7px solid $color-prim;
   @extend %border-radius;
   padding-left: 15px;
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-style: italic;
+}
 
+.grid__col--8,
+.grid__col--4 {
+  @include mq(med) {
+    overflow: hidden;
+    @include flexy($dir: column);
+  }
 }
